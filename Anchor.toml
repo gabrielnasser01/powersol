@@ -1,0 +1,31 @@
+﻿[workspace]
+members = [
+    "programs/powersol-core",
+    "programs/powersol-claim"
+]
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+init = "yarn ts-node scripts/init.ts"
+buy = "yarn ts-node scripts/buy.ts"
+draw = "yarn ts-node scripts/draw.ts"
+claim = "yarn ts-node scripts/claim.ts"
+affiliate_withdraw = "yarn ts-node scripts/aff-withdraw.ts"
+
+[programs.localnet]
+powersol_core = "9uZygNvHxtQdZpSevr1WpMGjRZou7qhzyap5mpVL6sP7"
+powersol_claim = "6P6jVWeNseyX2VVaodui6Tn6Pvx93w9u5GAbQHVq2PAS"
+
+[programs.devnet]
+powersol_core = "2hGiqYuw2sxu7P5AnbcW2CYwiVdcgGqzGwdrDam6DCrZ"
+powersol_claim = "4Qa4fA1NVuMcZV8K4D4x3Efr2E1V9AqMfCVxYvByBPjE"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[clusters]
+localnet = "http://127.0.0.1:8899"
+devnet = "https://api.devnet.solana.com"

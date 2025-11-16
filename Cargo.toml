@@ -1,0 +1,15 @@
+﻿[workspace]
+members = [
+    "programs/powersol-core",
+    "programs/powersol-claim"
+]
+resolver = "2"
+
+[workspace.dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+solana-program = "1.16.20"
+switchboard-v2 = { git = "https://github.com/switchboard-xyz/sbv2-solana", rev = "v0.29.6" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
